@@ -3,8 +3,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const dbName = 'goto-database';
 
-// mongoose.createConnection(`mongodb://localhost/${dbName}`);
-mongoose.createConnection(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 const db = mongoose.connection;
 
