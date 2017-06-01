@@ -1,11 +1,12 @@
 /*jshint esversion: 6 */
-
+require("dotenv").config();
 const mongoose = require("mongoose");
 const Destination = require('../models/destination');
 const https = require('https');
 const request = require('request-promise');
 
-mongoose.connect("mongodb://localhost/goto-database");
+// mongoose.connect("mongodb://localhost/goto-database");
+mongoose.createConnection(process.env.MONGODB_URI);
 
 const data = [
   {
