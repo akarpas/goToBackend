@@ -33,8 +33,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/goto-database');
 
 // app.use(session({
 //   secret: 'angular auth passport secret shh',
