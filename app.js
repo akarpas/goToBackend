@@ -1,5 +1,5 @@
 /*jshint esversion: 6*/
-
+const dotenv = require('dotenv');
 const express = require('express');
 const path = require('path');
 const favicon = require('serve-favicon');
@@ -12,6 +12,8 @@ const session    = require('express-session');
 const passport   = require('passport');
 const gotoApi = require('./routes/goto-api');
 const cors = require('cors');
+dotenv.config();
+dotenv.load();
 
 require('./configs/database');
 

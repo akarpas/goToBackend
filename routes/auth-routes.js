@@ -1,5 +1,5 @@
 /*jshint esversion: 6*/
-
+const dotenv = require('dotenv');
 const express = require('express');
 const passport = require('passport');
 const bcrypt = require('bcrypt');
@@ -7,7 +7,8 @@ const User = require('../models/user');
 const authRoutes = express.Router();
 var jwt = require('jsonwebtoken');
 var jwtOptions = require('../configs/jwtOptions');
-
+dotenv.config();
+dotenv.load();
 
 authRoutes.post('/signup', (req, res, next) => {
   const username = req.body.email;

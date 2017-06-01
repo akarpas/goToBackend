@@ -1,10 +1,12 @@
 /*jshint esversion: 6*/
-
+const dotenv = require('dotenv');
 var express = require('express');
 var router = express.Router();
 
 const Destination = require('../models/destination.js');
 const User = require('../models/user.js');
+dotenv.config();
+dotenv.load();
 
 router.get('/destinations', function(req, res, next) {
   Destination.find((err,destinationsList)=>{
