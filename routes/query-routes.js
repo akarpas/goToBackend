@@ -175,7 +175,7 @@ function checkFlightsMaxPrice(query, resultsFirstFilter, cb ) {
         callback();
       })
       .catch((err) => {
-
+        
         console.log(`api call fails for ${item.city} -> ${err}`);
         callback();
       });

@@ -3,8 +3,13 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+<<<<<<< HEAD
     "seed": "node ./bin/seeds",
     "start": "node ./bin/www",
+=======
+    "seed": "node ./bin/seeds.js",
+    "start": "nodemon ./bin/www",
+>>>>>>> development
     "start-dev": "nodemon ./bin/www"
   },
   "dependencies": {
