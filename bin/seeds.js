@@ -6,7 +6,7 @@ const https = require('https');
 const request = require('request-promise');
 
 // mongoose.connect("mongodb://localhost/goto-database");
-mongoose.createConnection(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI);
 
 const data = [
   {
